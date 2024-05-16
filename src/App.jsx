@@ -2,7 +2,7 @@ import { useEffect, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 
-import Layout from './components/Layout';
+import Layout from './components/Layout/Layout';
 import RestrictedRoute from './components/RestrictedRoute';
 import PrivateRoute from './components/PrivateRoute';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm.jsx';

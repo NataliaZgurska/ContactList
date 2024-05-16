@@ -1,8 +1,92 @@
 .header {
+  min-width: 320px;
+  max-width: 1170px;
+  height: 85px;
   display: flex;
+  flex-direction: row;
+
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
-  margin-bottom: 16px;
+
+  /* padding: 10px 20px 10px 20px; */
+  padding: 10px;
   border-bottom: 1px solid #2a363b;
+}
+
+.homeContactsWrap,
+.welcomeLogoutWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid blue;
+}
+
+.welcomeLogoutWrap {
+  align-items: end;
+}
+
+.registrationLoginWrap {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border: 1px solid blue;
+}
+.navLink {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #2a363b;
+}
+.navLink:hover {
+  color: blue;
+}
+.active {
+  color: blue;
+}
+
+.welcome {
+  font-weight: 700;
+}
+.username {
+  font-weight: 800;
+  color: #00008b;
+  font-style: italic;
+}
+.logoutBtn {
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  box-shadow: -3px 3px 5px 0px rgba(115, 111, 115, 1);
+  background-color: transparent;
+  color: gray;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  font-style: italic;
+
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+}
+.logoutBtn:hover {
+  background-color: #256fbe;
+  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
+  color: red;
+}
+.logoutBtn:focus,
+.logoutBtn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 40px;
+  }
+  .homeContactsWrap,
+  .welcomeLogoutWrap,
+  .registrationLoginWrap {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
 }

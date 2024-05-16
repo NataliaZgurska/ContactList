@@ -15,9 +15,9 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className={css.imgWrap}>
+        {/* <div className={css.imgWrap}>
           <img src={firstPicture} alt="tulips" className={css.homePageImg} />
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -19,7 +19,7 @@ label {
 
 input {
   height: 45px;
-  width: 260px;
+  width: 200px;
   font-size: 20px;
   color: #385983;
   line-height: 16px;
@@ -74,7 +74,20 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #434455;
-  background-color: #bed6f899;
+  /* background-color: #bed6f899; */
   margin: 0;
   min-height: 100vh;
+
+  background: linear-gradient(
+      217deg,
+      rgba(255, 255, 0, 0.8),
+      rgba(255, 255, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+@media screen and (min-width: 768px) {
+  imput {
+    width: 400px;
+  }
 }

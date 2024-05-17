@@ -43,13 +43,14 @@ const ContactForm = () => {
 
   return (
     <div className={css.formContainer}>
+      <h3 className={css.formAddTitle}>New contact</h3>
       <Formik
         initialValues={FORM_INITIAL_VALUES}
         validationSchema={FormSchema}
         onSubmit={handleSubmit}
       >
         <Form className={css.formAdd}>
-          <label className={css.formLabel}>
+          <label className={css.nameLabel}>
             <Field
               type="text"
               name="name"
@@ -63,25 +64,26 @@ const ContactForm = () => {
               name="name"
             />
           </label>
+          <div className={css.numberBtnWrap}>
+            <label className={css.numberLabel}>
+              <Field
+                type="number"
+                name="number"
+                placeholder="Number"
+                className={css.formInput}
+              />
 
-          <label className={css.formLabel}>
-            <Field
-              type="number"
-              name="number"
-              placeholder="Number"
-              className={css.formInput}
-            />
+              <ErrorMessage
+                className={css.errorMessage}
+                component="p"
+                name="number"
+              />
+            </label>
 
-            <ErrorMessage
-              className={css.errorMessage}
-              component="p"
-              name="number"
-            />
-          </label>
-
-          <button type="submit" className={css.btn}>
-            Add contact
-          </button>
+            <button type="submit" className={css.addNewbtn}>
+              Add
+            </button>
+          </div>
         </Form>
       </Formik>
     </div>

@@ -13,15 +13,16 @@ const Contact = ({ contact }) => {
 
   return (
     <div className={css.contactContainer}>
-      <p className={css.contactName}>{name}</p>
+      <div className={css.nameNumberWrap}>
+        <p className={css.contactName}>{name}</p>
 
-      <p className={css.contactPhoneNumber}>
-        <FaPhone />
-        {number}
-      </p>
-
+        <p className={css.contactNumber}>
+          <FaPhone />
+          {number}
+        </p>
+      </div>
       <button onClick={handleDelete} className={css.deleteBtn}>
-        <MdDeleteForever size={36} color="#2f85e2" />
+        <MdDeleteForever size={30} className={css.deleteBtnImg} />
       </button>
     </div>
   );

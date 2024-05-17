@@ -1,23 +1,38 @@
 .contactContainer {
-  font-size: 20px;
   font-weight: 600;
-  width: 260px;
   display: flex;
-  gap: 20px;
+  gap: 1em;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameNumberWrap {
+  display: flex;
+  gap: 1em;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.contactPhoneNumber {
+
+.contactName {
+  color: #256fbe;
+}
+.contactNumber {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 0.5em;
   align-items: center;
 }
+
 .deleteBtn {
   border: none;
   background-color: transparent;
 }
-.contactName {
-  color: #256fbe;
+
+.deleteBtnImg {
+  color: gray;
+}
+.deleteBtnImg:hover {
+  color: red;
 }

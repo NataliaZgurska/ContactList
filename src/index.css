@@ -20,13 +20,12 @@ label {
 input {
   height: 45px;
   width: 200px;
-  font-size: 20px;
+  font-size: 1em;
   color: #385983;
   line-height: 16px;
   border: 2px solid #bed6f8;
-
   border-radius: 5px;
-  padding-left: 25px;
+  padding-left: 0.5em;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -89,5 +88,7 @@ body {
 @media screen and (min-width: 768px) {
   imput {
     width: 400px;
+    font-size: 1.5em;
+    padding-left: 1em;
   }
 }

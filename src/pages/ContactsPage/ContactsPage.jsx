@@ -27,7 +27,6 @@ const ContactsPage = () => {
       <Helmet>
         <title>Phonebook</title>
       </Helmet>
-      <h2>Phonebook</h2>
       {error && <ErrorMessage title={error} />}
       <div className={css.formsContainer}>
         <ContactForm />

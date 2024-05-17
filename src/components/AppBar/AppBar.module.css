@@ -1,39 +1,39 @@
 .header {
   min-width: 320px;
   max-width: 1170px;
-  height: 85px;
+  height: 5em;
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
-  align-items: center;
-
-  /* padding: 10px 20px 10px 20px; */
-  padding: 10px;
+  align-items: end;
+  padding: 2px;
   border-bottom: 1px solid #2a363b;
 }
 
-.homeContactsWrap,
-.welcomeLogoutWrap {
+.homeContactsWrap {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid blue;
+  flex-direction: row;
+  gap: 1em;
 }
 
 .welcomeLogoutWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
   align-items: end;
+  margin-right: 6px;
 }
 
 .registrationLoginWrap {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  border: 1px solid blue;
 }
 .navLink {
   display: inline-block;
   text-decoration: none;
+  font-size: 1em;
   font-weight: 700;
   color: #2a363b;
 }
@@ -45,6 +45,7 @@
 }
 
 .welcome {
+  font-size: 1em;
   font-weight: 700;
 }
 .username {
@@ -53,7 +54,7 @@
   font-style: italic;
 }
 .logoutBtn {
-  width: 100px;
+  width: 4em;
   height: 30px;
   border-radius: 8px;
   border: 1px solid gray;

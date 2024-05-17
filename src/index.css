@@ -21,7 +21,9 @@ input {
   height: 45px;
   width: 200px;
   font-size: 1em;
-  color: #385983;
+  font-weight: 600;
+  /* color: #385983; */
+  color: #008000;
   line-height: 16px;
   border: 2px solid #bed6f8;
   border-radius: 5px;

@@ -12,6 +12,14 @@
   box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
   border-radius: 10px;
   padding: 0.2em 0.3em;
+  transition: background-color 0.25s, box-shadow 0.25s,
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contactItem:hover {
+  background-color: rgba(0, 255, 0, 0.8);
+  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
+  transform: scale(1.02, 1.02);
 }
 
 @media screen and (min-width: 768px) {

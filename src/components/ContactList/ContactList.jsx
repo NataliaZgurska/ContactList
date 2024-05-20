@@ -11,16 +11,18 @@ const ContactList = () => {
   });
 
   return (
-    <ul className={css.contactList}>
-      {Array.isArray(filteredContacts) &&
-        sortedContacts.map(contact => {
-          return (
-            <li className={css.contactItem} key={contact.id}>
-              <Contact contact={contact} />
-            </li>
-          );
-        })}
-    </ul>
+    <div>
+      <ul className={css.contactList}>
+        {Array.isArray(filteredContacts) &&
+          sortedContacts.map(contact => {
+            return (
+              <li className={css.contactItem} key={contact.id}>
+                <Contact contact={contact} />
+              </li>
+            );
+          })}
+      </ul>
+    </div>
   );
 };
 export default ContactList;

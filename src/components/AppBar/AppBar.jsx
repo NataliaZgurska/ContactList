@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { IoIosLogOut } from 'react-icons/io';
 
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { selectUser } from '../../redux/auth/selectors';
@@ -41,18 +42,19 @@ export const AppBar = () => {
             className={css.logoutBtn}
             onClick={() => dispatch(logout())}
           >
-            Logout
+            <IoIosLogOut size={30} />
+            <span className={css.tooltiptext}>LogOut</span>
           </button>
         </div>
       )}
       {!isLoggedIn && (
         <div className={css.registrationLoginWrap}>
           <NavLink to="/register" className={getNavLinkClassName}>
-            Registration
+            SignIn
           </NavLink>
 
           <NavLink to="/login" className={getNavLinkClassName}>
-            Login
+            LogIn
           </NavLink>
         </div>
       )}

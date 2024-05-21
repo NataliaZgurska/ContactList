@@ -53,3 +53,18 @@
 .logoutBtn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+@media screen and (min-width: 768px) {
+  .modalContent {
+    max-width: 800px;
+    height: 200px;
+    gap: 2em;
+    padding: 10px;
+  }
+  .modalTitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2a363b;
+    text-align: center;
+  }
+}

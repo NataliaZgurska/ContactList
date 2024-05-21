@@ -1,12 +1,13 @@
 .header {
   min-width: 320px;
   max-width: 1170px;
-  height: 5em;
+  height: 4.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
-  padding: 2px;
+  /* padding: 2px; */
+  padding-top: 1.5em;
   border-bottom: 1px solid #2a363b;
 }
 
@@ -14,15 +15,16 @@
   display: flex;
   flex-direction: row;
   gap: 1em;
+  /* border: 1px solid green; */
 }
 
 .welcomeLogoutWrap {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  /* gap: 0.5em; */
 
   align-items: end;
-  margin-right: 6px;
+  /* border: 1px solid blue; */
 }
 
 .registrationLoginWrap {
@@ -54,17 +56,23 @@
   font-style: italic;
 }
 .logoutBtn {
-  width: 4em;
+  width: 2em;
   height: 30px;
+
+  position: relative;
+  display: inline-block;
+
+  border: none;
   border-radius: 8px;
-  border: 1px solid gray;
-  box-shadow: -3px 3px 5px 0px rgba(115, 111, 115, 1);
+  /* border: 1px solid gray; */
+  /* box-shadow: -3px 3px 5px 0px rgba(115, 111, 115, 1); */
   background-color: transparent;
   color: gray;
   font-size: 1em;
   font-weight: 400;
   font-family: inherit;
   font-style: italic;
+  text-align: center;
 
   cursor: pointer;
   transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
@@ -77,6 +85,38 @@
 .logoutBtn:focus,
 .logoutBtn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/******** Підказка LogOut ********/
+.logoutBtn .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: transparent;
+  color: red;
+  text-align: center;
+  padding: 0;
+  /* padding: 5px 0; */
+  /* border-radius: 6px; */
+
+  top: 35px;
+  right: -130%;
+  position: absolute;
+  z-index: 1;
+}
+.logoutBtn:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media screen and (min-width: 400px) {
+  .header {
+    height: 2.5em;
+  }
+  .welcomeLogoutWrap {
+    flex-direction: row;
+    gap: 0.5em;
+    margin-right: 1em;
+    /* align-items: center; */
+  }
 }
 
 @media screen and (min-width: 768px) {

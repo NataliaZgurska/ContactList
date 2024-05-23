@@ -1,6 +1,9 @@
 .homePageContainer {
   position: relative;
   height: 100vh;
+  background-image: url(tulips-min.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .circle {
@@ -82,7 +85,7 @@
   }
 }
 
-.imgWrap {
+/* .imgWrap {
   float: right;
   width: 600px;
   height: auto;
@@ -91,7 +94,7 @@
 
 .homePageImg {
   width: 100%;
-}
+} */
 
 /************ 768 *************/
 @media screen and (min-width: 768px) {

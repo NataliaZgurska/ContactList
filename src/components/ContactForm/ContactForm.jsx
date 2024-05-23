@@ -9,7 +9,6 @@ import {
 
 import { addContact } from '../../redux/contacts/operations';
 import { selectFilter } from '../../redux/filters/selectors';
-import { clearFilter } from '../../redux/filters/slice';
 
 import css from './ContactForm.module.css';
 

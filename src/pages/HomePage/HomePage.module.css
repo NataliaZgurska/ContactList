@@ -1,132 +1,110 @@
 .homePageContainer {
   position: relative;
   height: 100vh;
-  background-image: url(tulips-min.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 51% 49% 61% 39% / 44% 36% 64% 56%;
-  box-shadow: 0px 6px 50px rgba(33 150 243 / 94%);
+.homePageTitle {
+  text-align: center;
+  color: greenyellow;
+  font-size: 30px;
+  margin-top: 10px;
+}
 
-  position: absolute;
-  /* left: 10%; */
-  top: 30%;
-  transform: translateY(-30%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.homePagePicturesList {
+  height: 145px;
+  /* border: 1px solid white; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  margin: 0 auto;
+}
 
-  animation-name: fadeHomePageCircle;
-  animation-duration: 1s;
+.HomePageImgWrap {
+  width: 100px;
+  opacity: 0%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+
+  animation-name: fadeHomePageImg;
+  animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-delay: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
-@keyframes fadeHomePageCircle {
+@keyframes fadeHomePageImg {
   0% {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    opacity: 10%;
   }
   25% {
-    width: 225px;
-    height: 225px;
+    width: 90px;
+    opacity: 30%;
   }
   50% {
-    width: 250px;
-    height: 250px;
+    width: 80px;
+    opacity: 60%;
   }
   75% {
-    width: 275px;
-    height: 275px;
+    width: 70px;
+    opacity: 75%;
   }
   100% {
-    width: 300px;
-    height: 300px;
+    width: 60px;
+    opacity: 100%;
   }
-}
-
-.welcomeText {
-  opacity: 0;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 22px;
-  color: blue;
-
-  animation-name: fadeHomePageWelcomeText;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeHomePageWelcomeText {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-/* .imgWrap {
-  float: right;
-  width: 600px;
-  height: auto;
-  margin-left: 20px;
 }
 
 .homePageImg {
+  display: block;
   width: 100%;
-} */
-
+}
+.welcomeText {
+  font-size: 22px;
+  text-align: center;
+  color: white;
+}
+.footerText {
+  position: absolute;
+  bottom: 90px;
+  height: 50px;
+  width: 100%;
+  color: #ffe4c4;
+  text-align: center;
+}
 /************ 768 *************/
 @media screen and (min-width: 768px) {
-  .circle {
-    width: 250px;
-    height: 250px;
-
-    left: 20%;
-    top: 40%;
-    transform: translateY(-50%);
+  .HomePageImgWrap {
+    width: 150px;
   }
 
-  @keyframes fadeHomePageCircle {
+  @keyframes fadeHomePageImg {
     0% {
-      width: 250px;
-      height: 250px;
+      width: 150px;
+      opacity: 10%;
     }
     25% {
-      width: 280px;
-      height: 280px;
+      width: 140px;
+      opacity: 30%;
     }
     50% {
-      width: 310px;
-      height: 310px;
+      width: 130px;
+      opacity: 60%;
     }
     75% {
-      width: 340px;
-      height: 340px;
+      width: 120px;
+      opacity: 75%;
     }
     100% {
-      width: 370px;
-      height: 370px;
+      width: 110px;
+      opacity: 100%;
     }
   }
 }

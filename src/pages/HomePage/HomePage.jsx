@@ -5,20 +5,20 @@ import { getImages } from '../../services/api';
 import ImageGallery from '../../components/ImageGallery/ImageGallery';
 
 const HomePage = () => {
-  const [images, setImages] = useState(null);
+  // const [images, setImages] = useState(null);
 
-  const fetchImages = async () => {
-    try {
-      const data = await getImages();
-      setImages(data.results);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchImages = async () => {
+  //   try {
+  //     const data = await getImages();
+  //     setImages(data.results);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchImages();
-  }, []);
+  // useEffect(() => {
+  //   fetchImages();
+  // }, []);
 
   return (
     <>
@@ -30,7 +30,7 @@ const HomePage = () => {
           Welcome! Save and manage your contacts
         </h1>
 
-        <ImageGallery images={images} />
+        {/* <ImageGallery images={images} /> */}
 
         <footer className={css.footerText}>Stay in touch!</footer>
       </div>

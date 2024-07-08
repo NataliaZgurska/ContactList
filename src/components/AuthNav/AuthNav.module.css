@@ -1,0 +1,17 @@
+.registrationLoginWrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  display: flex;
+  color: black;
+  text-decoration: none;
+}
+.navLink:hover {
+  color: blue;
+}
+.active {
+  color: red;
+}

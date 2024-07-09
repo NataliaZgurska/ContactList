@@ -5,7 +5,7 @@ import ContactModal from '../ContactModal/ContactModal';
 import css from './Contact.module.css';
 
 const Contact = ({ contact }) => {
-  const { id, name, number } = contact;
+  const { name, phoneNumber } = contact;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onOpenModal = () => {
@@ -26,7 +26,7 @@ const Contact = ({ contact }) => {
 
           <p className={css.contactNumber}>
             <FaPhone />
-            {number}
+            {phoneNumber}
           </p>
         </div>
         <button onClick={onOpenModal} className={css.deleteBtn}>

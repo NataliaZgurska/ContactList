@@ -29,7 +29,7 @@ const ContactList = () => {
       {allContacts.length > 0 ? (
         <ul className={css.contactList}>
           {sortedContacts.map(contact => (
-            <li className={css.contactItem} key={contact.id}>
+            <li className={css.contactItem} key={contact._id}>
               <Contact contact={contact} />
             </li>
           ))}

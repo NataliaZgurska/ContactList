@@ -45,6 +45,7 @@ const RegistrationForm = () => {
     dispatch(register(values));
     actions.resetForm();
   };
+  // ? якщо реєстрація завершилась помилкою 409 'User with such email already exists.'
 
   return (
     <div className={css.wrap}>

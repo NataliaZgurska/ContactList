@@ -30,6 +30,7 @@ const LoginForm = () => {
     dispatch(login(values));
     actions.resetForm();
   };
+  // ? якщо login  завершився помилкою 401 ''User with such email does not exists.' чи 'Unauthorized: wrong password'
 
   return (
     <div className={css.wrap}>

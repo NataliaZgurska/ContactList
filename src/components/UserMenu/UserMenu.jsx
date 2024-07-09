@@ -11,7 +11,7 @@ export const UserMenu = () => {
   return (
     <div className={css.wrapper}>
       <p className={css.welcome}>
-        Welcome <span className={css.username}>{user.name}</span>
+        Welcome, <span className={css.username}>{user.name}</span>
       </p>
       {/* <button
         type="button"

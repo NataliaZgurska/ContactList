@@ -31,12 +31,17 @@ const App = () => {
         <Route
           path="/register"
           element={
-            <RestrictedRoute redirectTo="/" component={<RegistrationForm />} />
+            <RestrictedRoute
+              redirectTo="/contacts"
+              component={<RegistrationForm />}
+            />
           }
         />
         <Route
           path="/login"
-          element={<RestrictedRoute redirectTo="/" component={<LoginForm />} />}
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<LoginForm />} />
+          }
         />
         <Route
           path="/contacts"

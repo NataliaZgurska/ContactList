@@ -5,10 +5,11 @@
 }
 .welcome {
   font-weight: 700;
+  text-align: right;
 }
 .username {
   font-weight: 800;
-  color: blue;
+  color: darkviolet;
   font-style: italic;
 }
 

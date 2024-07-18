@@ -25,7 +25,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.isLoggedIn = true;
         state.user = action.payload.user;
-        state.token = action.payload.token;
       })
 
       //login
@@ -33,7 +32,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.isLoggedIn = true;
         state.user = action.payload.user;
-        state.token = action.payload.token;
+        state.token = action.payload.accessToken;
       })
 
       //refreshUser

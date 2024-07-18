@@ -13,6 +13,7 @@ export const UserMenu = () => {
       <p className={css.welcome}>
         Welcome, <span className={css.username}>{user.name}</span>
       </p>
+
       {/* <button
         type="button"
         className={css.btn}

@@ -15,44 +15,56 @@ const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage/ContactsPage'));
 
 const App = () => {
-  const dispatch = useDispatch();
-  const isRefreshing = useSelector(selectIsRefreshing);
+  // const dispatch = useDispatch();
+  // const isRefreshing = useSelector(selectIsRefreshing);
 
-  useEffect(() => {
-    dispatch(refreshUser());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(refreshUser());
+  // }, [dispatch]);
 
-  return isRefreshing ? (
-    <b>Refreshing user...</b>
-  ) : (
+  return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route
-          path="/register"
-          element={
-            <RestrictedRoute
-              redirectTo="/contacts"
-              component={<RegistrationForm />}
-            />
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={<LoginForm />} />
-          }
-        />
-        <Route
-          path="/contacts"
-          element={
-            <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
-          }
-        />
+        <Route path="/register" element={<RegistrationForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/contacts" element={<ContactsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
+
+  //   return isRefreshing ? (
+  //     <b>Refreshing user...</b>
+  //   ) : (
+  //     <Routes>
+  //       <Route path="/" element={<Layout />}>
+  //         <Route index element={<HomePage />} />
+  //         <Route
+  //           path="/register"
+  //           element={
+  //             <RestrictedRoute
+  //               redirectTo="/contacts"
+  //               component={<RegistrationForm />}
+  //             />
+  //           }
+  //         />
+  //         <Route
+  //           path="/login"
+  //           element={
+  //             <RestrictedRoute redirectTo="/contacts" component={<LoginForm />} />
+  //           }
+  //         />
+  //         <Route
+  //           path="/contacts"
+  //           element={
+  //             <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+  //           }
+  //         />
+  //         <Route path="*" element={<NotFoundPage />} />
+  //       </Route>
+  //     </Routes>
+  //   );
 };
 export default App;
 // redirectTo="/contacts"
